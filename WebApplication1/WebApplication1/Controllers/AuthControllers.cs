@@ -32,6 +32,8 @@ public class AuthController : ControllerBase
 
         if (!result.Succeeded)
             return BadRequest(result.Errors);
+        
+        await _userManager.AddToRoleAsync(user, "user");
 
         return Ok(new { message = "Registration successful" });
     }
@@ -52,6 +54,11 @@ public class AuthController : ControllerBase
         var jwtKey = Env.GetString("JWT_KEY");
         var jwtIssuer = Env.GetString("JWT_ISSUER");
         var jwtAudience = Env.GetString("JWT_AUDIENCE");
+        
+        if (user.Email == null)
+            {
+                throw new InvalidOperationException("User email cannot be null when generating JWT token.");
+            }
 
         var claims = new[]
         {
