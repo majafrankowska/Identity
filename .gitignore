@@ -398,7 +398,80 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+# ---------------------
+# .NET / ASP.NET Core
+# ---------------------
+bin/
+obj/
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
 
-*.env
-*.idea/
+# ASP.NET config files
+**/appsettings.*.json
+*/appsettings.*.json
+appsettings.json
 appsettings.*.json
+secrets.json
+
+# EF Core migrations snapshots
+Migrations/*Snapshot.cs
+
+# DotNet CLI artifacts
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Local database files
+*.db
+*.mdf
+*.ldf
+
+# ---------------------
+# JetBrains Rider 
+# ---------------------
+.idea/
+*.idea/
+*.sln.iml
+*.DotSettings.user
+
+# Rider caches
+.idea/.ideaModules/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/httpRequests
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS metadata
+*.swp
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# PostgreSQL dump / sensitive
+*.sql
+*.dump
+*.backup
+
+# Environment files / Secrets
+*.env
+.env
+.env.*
+
+# Logs / Runtime / Debug
+*.log
+logs/
+*.pid
+*.seed
+
+# VSCode 
+.vscode/
