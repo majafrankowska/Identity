@@ -475,3 +475,9 @@ logs/
 
 # VSCode 
 .vscode/
+
+.DS_Store
+*.DS_Store
+WebApplication1/.DS_Store
+
+
