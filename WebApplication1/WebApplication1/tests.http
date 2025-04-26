@@ -1,0 +1,35 @@
+POST http://localhost:5001/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "email": "testuser@example.com",
+  "password": "SecureP@ssw0rd",
+  "cohortId": "b83a0fa7-6a6a-4f0e-bc80-61b6a7a75231"
+}
+
+###
+
+POST http://localhost:5001/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "SecureP@ssw0rd"
+}
+
+###
+
+POST http://localhost:5001/api/auth/refresh
+Content-Type: application/json
+
+{
+  "refreshToken": "{your_refresh_token_here}"
+}
+
+###
+
+POST http://localhost:5001/api/auth/logout
+Authorization: Bearer {your_access_token_here}
+
+###
