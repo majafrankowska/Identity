@@ -1,4 +1,4 @@
-namespace WebApplication1.Modules.UserModule.Entities;
+namespace WebApplication1.Modules.UserModule.Models;
 
 public class UserRole
 {

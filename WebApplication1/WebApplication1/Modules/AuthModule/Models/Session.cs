@@ -1,6 +1,6 @@
-using WebApplication1.Modules.UserModule.Entities;
+using WebApplication1.Modules.UserModule.Models;
 
-namespace WebApplication1.Modules.AuthModule.Entities;
+namespace WebApplication1.Modules.AuthModule.Models;
 
 public class Session
 {

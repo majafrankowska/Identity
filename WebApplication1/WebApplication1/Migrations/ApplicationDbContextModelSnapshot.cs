@@ -152,7 +152,7 @@ namespace WebApplication1.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("WebApplication1.Modules.AuthModule.Entities.Session", b =>
+            modelBuilder.Entity("WebApplication1.Modules.AuthModule.Models.Session", b =>
                 {
                     b.Property<Guid>("SessionId")
                         .ValueGeneratedOnAdd()
@@ -183,7 +183,7 @@ namespace WebApplication1.Migrations
                     b.ToTable("session", (string)null);
                 });
 
-            modelBuilder.Entity("WebApplication1.Modules.UserModule.Entities.ApplicationUser", b =>
+            modelBuilder.Entity("WebApplication1.Modules.UserModule.Models.ApplicationUser", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -278,7 +278,7 @@ namespace WebApplication1.Migrations
                     b.ToTable("user", (string)null);
                 });
 
-            modelBuilder.Entity("WebApplication1.Modules.UserModule.Entities.UserRole", b =>
+            modelBuilder.Entity("WebApplication1.Modules.UserModule.Models.UserRole", b =>
                 {
                     b.Property<Guid>("UserRoleId")
                         .ValueGeneratedOnAdd()
@@ -306,7 +306,7 @@ namespace WebApplication1.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<System.Guid>", b =>
                 {
-                    b.HasOne("WebApplication1.Modules.UserModule.Entities.ApplicationUser", null)
+                    b.HasOne("WebApplication1.Modules.UserModule.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -315,7 +315,7 @@ namespace WebApplication1.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<System.Guid>", b =>
                 {
-                    b.HasOne("WebApplication1.Modules.UserModule.Entities.ApplicationUser", null)
+                    b.HasOne("WebApplication1.Modules.UserModule.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -330,7 +330,7 @@ namespace WebApplication1.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("WebApplication1.Modules.UserModule.Entities.ApplicationUser", null)
+                    b.HasOne("WebApplication1.Modules.UserModule.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -339,16 +339,16 @@ namespace WebApplication1.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<System.Guid>", b =>
                 {
-                    b.HasOne("WebApplication1.Modules.UserModule.Entities.ApplicationUser", null)
+                    b.HasOne("WebApplication1.Modules.UserModule.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("WebApplication1.Modules.AuthModule.Entities.Session", b =>
+            modelBuilder.Entity("WebApplication1.Modules.AuthModule.Models.Session", b =>
                 {
-                    b.HasOne("WebApplication1.Modules.UserModule.Entities.ApplicationUser", "User")
+                    b.HasOne("WebApplication1.Modules.UserModule.Models.ApplicationUser", "User")
                         .WithMany("Sessions")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -358,9 +358,9 @@ namespace WebApplication1.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("WebApplication1.Modules.UserModule.Entities.ApplicationUser", b =>
+            modelBuilder.Entity("WebApplication1.Modules.UserModule.Models.ApplicationUser", b =>
                 {
-                    b.HasOne("WebApplication1.Modules.UserModule.Entities.UserRole", "UserRole")
+                    b.HasOne("WebApplication1.Modules.UserModule.Models.UserRole", "UserRole")
                         .WithMany()
                         .HasForeignKey("UserRoleId")
                         .HasConstraintName("fk_user_user_role");
@@ -368,7 +368,7 @@ namespace WebApplication1.Migrations
                     b.Navigation("UserRole");
                 });
 
-            modelBuilder.Entity("WebApplication1.Modules.UserModule.Entities.ApplicationUser", b =>
+            modelBuilder.Entity("WebApplication1.Modules.UserModule.Models.ApplicationUser", b =>
                 {
                     b.Navigation("Sessions");
                 });

@@ -1,4 +1,4 @@
-using WebApplication1.Modules.UserModule.Entities;
+using WebApplication1.Modules.UserModule.Models;
 using System.Security.Claims;
 
 

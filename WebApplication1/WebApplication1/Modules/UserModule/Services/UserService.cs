@@ -1,5 +1,5 @@
 using WebApplication1.Modules.UserModule.DTOs;
-using WebApplication1.Modules.UserModule.Entities;
+using WebApplication1.Modules.UserModule.Models;
 using WebApplication1.Modules.UserModule.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.DAL;

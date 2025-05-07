@@ -5,7 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using DotNetEnv;
 using WebApplication1.DAL;
-using WebApplication1.Modules.UserModule.Entities;
+using WebApplication1.Modules.UserModule.Models;
 using WebApplication1.Modules.AuthModule.Jwt;
 using WebApplication1.Modules.AuthModule.Interfaces;
 using WebApplication1.Modules.AuthModule.Services;

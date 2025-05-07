@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using WebApplication1.Modules.AuthModule.Entities;
-using WebApplication1.Modules.UserModule.Entities;
+using WebApplication1.Modules.AuthModule.Models;
+using WebApplication1.Modules.UserModule.Models;
 
 namespace WebApplication1.DAL
 {
@@ -60,7 +60,7 @@ namespace WebApplication1.DAL
                 entity.Property(s => s.Revoked).HasColumnName("revoked");
                 entity.Property(s => s.UserId).HasColumnName("user_id");
 
-                entity.HasOne<WebApplication1.Modules.UserModule.Entities.ApplicationUser>(s => s.User)
+                entity.HasOne<WebApplication1.Modules.UserModule.Models.ApplicationUser>(s => s.User)
                       .WithMany(u => u.Sessions)
                       .HasForeignKey(s => s.UserId)
                       .HasConstraintName("fk_session_user");
@@ -68,5 +68,4 @@ namespace WebApplication1.DAL
         }
     }
 }
-
 

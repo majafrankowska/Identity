@@ -6,7 +6,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using WebApplication1.Modules.AuthModule.Interfaces;
 using WebApplication1.Modules.AuthModule.Jwt;
-using WebApplication1.Modules.UserModule.Entities;
+using WebApplication1.Modules.UserModule.Models;
 
 namespace WebApplication1.Modules.AuthModule.Services;
 

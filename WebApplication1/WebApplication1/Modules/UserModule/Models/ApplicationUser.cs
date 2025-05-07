@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 
-namespace WebApplication1.Modules.UserModule.Entities;
+namespace WebApplication1.Modules.UserModule.Models;
 
 public class ApplicationUser : IdentityUser<Guid>
 {
@@ -13,5 +13,5 @@ public class ApplicationUser : IdentityUser<Guid>
     public Guid? UserRoleId { get; set; }
     public UserRole? UserRole { get; set; }
 
-    public ICollection<WebApplication1.Modules.AuthModule.Entities.Session>? Sessions { get; set; }
+    public ICollection<WebApplication1.Modules.AuthModule.Models.Session>? Sessions { get; set; }
 }

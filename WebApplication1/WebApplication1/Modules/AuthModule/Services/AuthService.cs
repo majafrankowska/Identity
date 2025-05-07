@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.Modules.AuthModule.DTOs;
-using WebApplication1.Modules.AuthModule.Entities;
+using WebApplication1.Modules.AuthModule.Models;
 using WebApplication1.Modules.AuthModule.Interfaces;
-using WebApplication1.Modules.UserModule.Entities;
+using WebApplication1.Modules.UserModule.Models;
 using WebApplication1.DAL;
 
 namespace WebApplication1.Modules.AuthModule.Services;
